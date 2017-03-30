@@ -1,6 +1,6 @@
 //
 //  ProfileController.m
-//  ProphetDemo
+//  AnnotationKitDemo
 //
 //  Created by luoqihsneg on 2016/11/23.
 //  Copyright © 2016年 com.luoqihsneg. All rights reserved.
@@ -14,7 +14,7 @@
 @property (nonatomic,strong)UIButton *jumpIndex;
 @end
 
-@RequestMapping(ProfileController, "prophet://profile/:userId/")
+@RequestMapping(ProfileController, "demo://profile/:userId/")
 @implementation ProfileController
 
 - (void)viewDidLoad {
@@ -77,6 +77,6 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
-    [[AKRouter shared] routeTo:@"prophet://demo/biz1/"];
+    [[AKRouter shared] routeTo:@"demo://demo/biz1/"];
 }
 @end

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  ProphetDemo
+//  AnnotationKitDemo
 //
 //  Created by luoqihsneg on 2016/11/23.
 //  Copyright © 2016年 com.luoqihsneg. All rights reserved.
@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //set up Prophet
+    //set up AnnotationKit
     [[AKEngine sharedAKEngine]setUp];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[ViewController new]];
     self.window.rootViewController = nav;

@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  ProphetDemo
+//  AnnotationKitDemo
 //
 //  Created by luoqihsneg on 2016/11/23.
 //  Copyright © 2016年 com.luoqihsneg. All rights reserved.
@@ -29,7 +29,7 @@
 @property (nonatomic,strong) UIButton *jumpProfile;
 @end
 
-@RequestMapping(BizTwoController, "prophet://demo/biz2/")
+@RequestMapping(BizTwoController, "demo://demo/biz2/")
 @implementation BizTwoController
 
 @When(AppLaunched,BizTwoController,doLaunched)
@@ -123,7 +123,7 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
-    [[AKRouter shared] routeTo:@"prophet://demo/index/"];
+    [[AKRouter shared] routeTo:@"demo://demo/index/"];
 }
 
 @end
