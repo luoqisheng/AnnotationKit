@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 #import <AnnotationKit/LifeCycleAnnnotation.h>
-#import <AnnotationKit/AKRouteAnnotaion.h>
+#import <AnnotationKit/AKRouter.h>
+#import <AnnotationKit/AKRouteAnnotation.h>
+
 @interface ViewController (test)
 
 @end
@@ -121,9 +123,7 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
-    UIViewController *vc = [[HHRouter shared]matchController:@"prophet://profile/1024/"];
-    
-     [self.navigationController pushViewController:vc animated:YES];
+    [[AKRouter shared] routeTo:@"prophet://profile/1024/"];
 }
 
 @end

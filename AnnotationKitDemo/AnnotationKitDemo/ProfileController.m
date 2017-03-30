@@ -7,7 +7,8 @@
 //
 
 #import "ProfileController.h"
-#import <AnnotationKit/AKRouteAnnotaion.h>
+#import <AnnotationKit/AKRouter.h>
+#import <AnnotationKit/AKRouteAnnotation.h>
 @interface ProfileController ()
 @property (nonatomic,strong)NSString *userId;
 @property (nonatomic,strong)UIButton *jumpIndex;
@@ -76,7 +77,6 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
-    UIViewController *vc = [[HHRouter shared]matchController:@"prophet://demo/biz1/"];
-    [self.navigationController pushViewController:vc animated:YES];
+    [[AKRouter shared] routeTo:@"prophet://demo/biz1/"];
 }
 @end

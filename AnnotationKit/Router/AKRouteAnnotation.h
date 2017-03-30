@@ -8,14 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "AKEngine.h"
-#import <HHRouter/HHRouter.h>
 
 #ifndef RequestMapping
 #define RequestMapping(name,url) \
 class AKEngine; char *const NameGen(name,_url) AnnotationDATA(route) = "{\""#name"\":"#url"}";
-
 #endif
 
 
-@interface AKRouteAnnotaion : PHAnnotationHandler
+@interface AKRouteAnnotation : PHAnnotationHandler
 @end

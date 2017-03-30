@@ -9,7 +9,9 @@
 #import "BizTwoController.h"
 
 #import <AnnotationKit/LifeCycleAnnnotation.h>
-#import <AnnotationKit/AKRouteAnnotaion.h>
+#import <AnnotationKit/AKRouter.h>
+#import <AnnotationKit/AKRouteAnnotation.h>
+
 @interface BizTwoController (test)
 
 @end
@@ -121,8 +123,7 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
-    UIViewController *vc = [[HHRouter shared]matchController:@"prophet://demo/index/"];
-    [self.navigationController pushViewController:vc animated:YES];
+    [[AKRouter shared] routeTo:@"prophet://demo/index/"];
 }
 
 @end

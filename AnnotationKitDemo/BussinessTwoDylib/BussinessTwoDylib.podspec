@@ -8,14 +8,14 @@ Pod::Spec.new do |s|
                    业务模块二的动态库
                    DESC
 
-  s.homepage     = "http://EXAMPLE/Prophet"
+  s.homepage     = "http://EXAMPLE/AnnotationKit"
   s.license      = "MIT (example)"
-  s.author       = { "寻峰" => "qisheng.lqs@alibaba-inc.com" }
+  s.author       = { "luoqisheng" => "540025011@qq.com" }
 
   s.platform     = :ios, "7.0"
   s.requires_arc = true
   s.source_files = "*.{h,m,mm}"
-  s.dependency "HHRouter"
+  s.dependency "AnnotationKit"
   s.xcconfig = {
           'CLANG_CXX_LANGUAGE_STANDARD' => 'compiler-default',
           'CLANG_CXX_LIBRARY' => 'compiler-default',

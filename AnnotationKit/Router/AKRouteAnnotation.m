@@ -6,17 +6,16 @@
 //
 //
 
-#import "AKRouteAnnotaion.h"
+#import "AKRouteAnnotation.h"
 #import "NSDictionary+AnnotationKit.h"
-#import <HHRouter/HHRouter.h>
-
-@interface AKRouteAnnotaion ()
+#import "AKRouter.h"
+@interface AKRouteAnnotation ()
 @property (nonatomic,strong)NSMutableArray *configs;
 @end
 
 
-@DefineAnnotation(AKRouteAnnotaion,route)
-@implementation AKRouteAnnotaion
+@DefineAnnotation(AKRouteAnnotation,route)
+@implementation AKRouteAnnotation
 - (instancetype)init
 {
     self = [super init];
@@ -37,7 +36,7 @@
                 NSString *clsName = [[json allKeys] firstObject];
                 NSString *url = [json akSafeObjectForKey:clsName];
                 if (clsName && url) {
-                    [[HHRouter shared]map:url toControllerClass:NSClassFromString(clsName)];
+                    [[AKRouter shared]map:url toControllerClass:NSClassFromString(clsName)];
                     [self.configs addObject:@{url:clsName}];
                 }
             }

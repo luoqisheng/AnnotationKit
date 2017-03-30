@@ -5,12 +5,12 @@ Pod::Spec.new do |s|
   s.summary      = "A short description of AnnotationKit."
 
   s.description  = <<-DESC
-                   先知
+                   an annotation solution using objective-c
                    DESC
 
   s.homepage     = "http://EXAMPLE/AnnotationKit"
   s.license      = "MIT (example)"
-  s.author       = { "luoqisheng" => "qishengluo@gmail.com" }
+  s.author       = { "luoqisheng" => "540025011@qq.com" }
 
   s.platform     = :ios, "7.0"
   s.requires_arc = true
