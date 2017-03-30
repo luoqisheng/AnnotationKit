@@ -1,0 +1,16 @@
+source "git@gitlab.alibaba-inc.com:alipods/specs.git"
+source "git@gitlab.alibaba-inc.com:alipods/specs-mirror.git"
+
+platform :ios
+xcodeproj 'AnnotationKitDemo.xcodeproj'
+target 'AnnotationKitDemo' do
+	platform:ios, '8.0'
+    use_frameworks!
+    
+    pod  'AnnotationKit/EventCenter',     :path=>'../AnnotationKit'
+    pod  'AnnotationKit/Router',          :path=>'../AnnotationKit'
+
+
+    pod  'BussinessOneDylib',       :path=> './BussinessOneDylib'
+    pod  'BussinessTwoDylib',       :path=> './BussinessTwoDylib'
+end
