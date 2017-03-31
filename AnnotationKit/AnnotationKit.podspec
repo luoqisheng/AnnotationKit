@@ -2,19 +2,19 @@ Pod::Spec.new do |s|
 
   s.name         = "AnnotationKit"
   s.version  = "1.0.0"
-  s.summary      = "A short description of AnnotationKit."
+  s.summary      = "AnnotationKit provides you a way for meta-programming"
 
   s.description  = <<-DESC
                    an annotation solution using objective-c
                    DESC
 
-  s.homepage     = "http://EXAMPLE/AnnotationKit"
-  s.license      = "MIT (example)"
+  s.homepage     = "https://github.com/luoqisheng/AnnotationKit"
+  s.license      = "MIT"
   s.author       = { "luoqisheng" => "540025011@qq.com" }
 
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
   s.requires_arc = true
-  #s.source_files = "AnnotationKit/*/**/*.{h,m,mm}"
+  s.source_files = "AnnotationKit/*/**/*.{h,m,mm}"
 
   s.subspec 'Core' do |core|
     core.source_files = ["Core/*.{h,m}" , "Category/*.{h,m}"]

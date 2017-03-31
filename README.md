@@ -39,7 +39,6 @@ AnnotationKit provide a meta-programming approach,like the annotation in Java.
 {
     NSLog(@"%@",note);
 }
-
 ```
 
 
@@ -60,19 +59,37 @@ AnnotationKit provide a meta-programming approach,like the annotation in Java.
 
 1. Subclass the PHAnnotationHandler 
 
-2. override the `-(void)handleAnnotationConfig:(NSArray<NSString *>*)configs;` to gain your meta data
+2. use @DefineAnnotation() to define your annotation.
 
-3. use @DefineAnnotation() to define your annotation.
+3. override  `-(void)handleAnnotationConfig:(NSArray<NSString *>*)configs;` to gain your meta data
 
 4. an example : Use HHRoute to impl my @RequestMapping
 
    ```objective-c
+   //AKRouteAnnotation.h
+   #import <Foundation/Foundation.h>
+   #import "AKEngine.h"
+
+   //provides the @RequestMapping
+   #ifndef RequestMapping
+   #define RequestMapping(name,url) \
+   class AKEngine; char *const NameGen(name,_url) AnnotationDATA(route) = "{\""#name"\":"#url"}";
+   #endif
+
+   @interface AKRouteAnnotation : PHAnnotationHandler
+   @end
+   ```
+
+   ​
+
+   ```objective-c
+   //AKRouteAnnotaion.m
    #import "AKRouteAnnotaion.h"
    #import "NSDictionary+AnnotationKit.h"
    #import <HHRouter/HHRouter.h>
    @interface AKRouteAnnotaion ()
    @end
-    //arg0 :AKRouteAnnotaion for class name, arg1: route shoule less than 16 chars
+    //arg0 :AKRouteAnnotaion for class name, arg1: route which is defined in AnnotationDATA ,
    @DefineAnnotation(AKRouteAnnotaion,route)
    @implementation AKRouteAnnotaion
    - (void)handleAnnotationConfig:(NSArray<NSString *> *)configs {

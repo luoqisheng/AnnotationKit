@@ -11,7 +11,7 @@
 #import "PHAnnotationHandler.h"
 #import <UIKit/UIKit.h>
 
-#ifndef DefineAnnotation
+#ifndef DefineAnnotation /*use @DefineAnnotation() to declare your custom annotation  */
 
 #define AnnotationSectName "annotation"
 #define DefineAnnotation(handler,section) \
