@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
   s.requires_arc = true
-  s.source_files = "AnnotationKit/*/**/*.{h,m,mm}"
+  s.source       = { :git => 'https://github.com/luoqisheng/AnnotationKit.git', :tag => 'v1.0.0' }
 
   s.subspec 'Core' do |core|
     core.source_files = ["Core/*.{h,m}" , "Category/*.{h,m}"]
