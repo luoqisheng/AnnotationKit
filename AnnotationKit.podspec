@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AnnotationKit"
-  s.version  = "1.0.0"
+  s.version  = "v1.0.0"
   s.summary      = "AnnotationKit provides you a way for meta-programming"
 
   s.description  = <<-DESC
@@ -14,22 +14,21 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
   s.requires_arc = true
-  s.source       = { :git => 'https://github.com/luoqisheng/AnnotationKit.git', :tag => 'v1.0.0' }
+  s.source       = { :git => 'https://github.com/luoqisheng/AnnotationKit.git', :tag => '#{s.version}' }
 
   s.subspec 'Core' do |core|
-    core.source_files = ["Core/*.{h,m}" , "Category/*.{h,m}"]
+    core.source_files = ["AnnotationKit/Core/*.{h,m}" , "AnnotationKit/Category/*.{h,m}"]
     core.requires_arc = true
   end
 
   s.subspec 'Router' do |rt|
-    rt.source_files = 'Router/*.{h,m}'
+    rt.source_files = ["AnnotationKit/Router/*.{h,m}" , "AnnotationKit/Router/**/*.{h,m}"]
     rt.requires_arc = true
-    rt.dependency 'HHRouter'
     rt.dependency 'AnnotationKit/Core'
   end
 
   s.subspec 'EventCenter' do |ec|
-    ec.source_files = 'EventCenter/*.{h,m}'
+    ec.source_files = 'AnnotationKit/EventCenter/*.{h,m}'
     ec.requires_arc = true
     ec.dependency 'AnnotationKit/Core'
   end
