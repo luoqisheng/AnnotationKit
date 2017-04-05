@@ -18,11 +18,6 @@
 #include "AnnotationMacro.h"
 #import "PHAnnotationHandler.h"
 
-#if DEBUG
-#else
-#deine NSLog(...) /*empty*/
-#endif 
-
 #ifndef __LP64__
 
 typedef struct mach_header mach_header_t;
