@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Router' do |rt|
-    rt.source_files = ["AnnotationKit/Router/*.{h,m}" , "AnnotationKit/Router/**/*.{h,m}"]
+    rt.source_files = 'AnnotationKit/Router/*.{h,m}'
     rt.requires_arc = true
     rt.dependency 'AnnotationKit/Core'
     rt.dependency 'HHRouter'

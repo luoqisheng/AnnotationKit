@@ -1,17 +1,14 @@
-source 'https://github.com/CocoaPods/Old-Specs.git'
+#source 'https://github.com/CocoaPods/Old-Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios
 xcodeproj 'AnnotationKitDemo.xcodeproj'
 target 'AnnotationKitDemo' do
 	platform:ios, '8.0'
     use_frameworks!
     
-    #pod  'AnnotationKit/EventCenter',     :git => 'https://github.com/luoqisheng/AnnotationKit.git',:tag => 'v1.0.0'
-    #pod  'AnnotationKit/Router',          :git => 'https://github.com/luoqisheng/AnnotationKit.git',:tag => 'v1.0.0'
-    pod  'AnnotationKit/EventCenter',    :path => '../AnnotationKit.podspec'
-    pod  'AnnotationKit/Router',         :path => '../AnnotationKit.podspec'
-
-
-
+    pod  'AnnotationKit',     :git => ''
+    
     pod  'BussinessOneDylib',       :path=> './BussinessOneDylib'
     pod  'BussinessTwoDylib',       :path=> './BussinessTwoDylib'
 end
