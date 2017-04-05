@@ -4,10 +4,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios
 xcodeproj 'AnnotationKitDemo.xcodeproj'
 target 'AnnotationKitDemo' do
-	platform:ios, '8.0'
-    use_frameworks!
-    
-    pod  'AnnotationKit',     :git => ''
+	platform:ios, '8.0'    
+    pod  'AnnotationKit',     '1.0.2'
     
     pod  'BussinessOneDylib',       :path=> './BussinessOneDylib'
     pod  'BussinessTwoDylib',       :path=> './BussinessTwoDylib'
