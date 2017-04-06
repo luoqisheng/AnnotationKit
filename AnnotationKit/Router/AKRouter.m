@@ -29,8 +29,24 @@
     
 - (void)routeTo:(NSString *)route
 {
-    UIViewController *vc = [self matchController:route];
-    [[self topViewController].navigationController pushViewController:vc animated:YES];
+    HHRouteType ret= [[HHRouter shared]canRoute:route];
+    
+    switch (ret) {
+        case HHRouteTypeViewController:
+        {
+            UIViewController *vc = [self matchController:route];
+            [[self topViewController].navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case HHRouteTypeBlock:
+        {
+            [[HHRouter shared]callBlock:route];
+            
+        }
+            break;
+        default:
+            break;
+    }
 }
     
 - (BOOL)canRoute:(NSString *)route
