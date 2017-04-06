@@ -60,7 +60,11 @@
 {
     [[HHRouter shared]map:route toControllerClass:controllerClass];
 }
-    
+
+- (void)map:(NSString *)route toBlock:(AKRouterBlock)block
+{
+    [[HHRouter shared]map:route toBlock:block];
+}
     
     
 - (UIViewController *)topViewController{
