@@ -62,7 +62,7 @@
     NSLog(@"%@",note);
 }
 
-@AKNPC(ViewController, doNpc,"npc://npc/:userId/")
+@AKNPC(ViewController, doNpc,"demo://npc/:userId/")
 + (void)doNpc:(NSDictionary *)params
 {
     NSLog(@"%@",params);
@@ -129,7 +129,7 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
-    [[AKRouter shared] routeTo:@"npc://npc/1024/"];
+    [[AKRouter shared] routeTo:@"demo://profile/1024/"];
 }
 
 @end
