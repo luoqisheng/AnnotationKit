@@ -123,6 +123,7 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
+    // route to the ViewController in main bundle
     [[AKRouter shared] routeTo:@"demo://demo/index/"];
 }
 

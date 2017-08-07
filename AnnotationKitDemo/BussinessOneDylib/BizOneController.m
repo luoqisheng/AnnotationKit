@@ -123,6 +123,7 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
+    // route to the BizTwoController in BussinessTwoDylib.dylib
     [[AKRouter shared] routeTo:@"demo://demo/biz2/"];
 }
 

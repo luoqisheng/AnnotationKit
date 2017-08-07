@@ -77,6 +77,7 @@
 #pragma mark - action
 - (void)onClick:(id)sender
 {
+    // route to the BizOneController in BussinessOneDylib.dylib
     [[AKRouter shared] routeTo:@"demo://demo/biz1/"];
 }
 @end
