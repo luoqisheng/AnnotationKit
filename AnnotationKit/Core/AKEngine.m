@@ -63,7 +63,6 @@ static void prepare_annotation(const struct mach_header *header,
  
     
     for (NSDictionary *map in _annotations) {
-        
         if ([map isKindOfClass:[NSDictionary class]] && [map allKeys].count) {
             NSString *sectionName = [[map allKeys] firstObject];
             const char *sectionCName = [sectionName UTF8String];
@@ -82,8 +81,6 @@ static void prepare_annotation(const struct mach_header *header,
                 
             }
         }
-        
-        
     }
 }
 

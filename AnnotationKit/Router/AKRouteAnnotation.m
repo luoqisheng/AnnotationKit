@@ -13,7 +13,6 @@
 @property (nonatomic,strong)NSMutableArray *configs;
 @end
 
-
 @DefineAnnotation(AKRouteAnnotation,route)
 @implementation AKRouteAnnotation
 - (instancetype)init
@@ -60,7 +59,6 @@
                 NSString *selName = [json akSafeObjectForKey:@"sel_name"];
                 NSString *url = [json akSafeObjectForKey:@"url"];
                 
-                
                 Class cls  = NSClassFromString(clsName);
                 SEL   sel  = NSSelectorFromString([NSString stringWithFormat:@"%@:",selName]);
                 
@@ -71,9 +69,7 @@
                         return ret;
                     }];
                 }
-            }
-            
-            
+            }            
         }
     }
     

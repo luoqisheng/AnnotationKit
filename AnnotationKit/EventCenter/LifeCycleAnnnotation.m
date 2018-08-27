@@ -23,10 +23,7 @@
 @property (nonatomic,strong)NSMutableArray *AppToBackgroundHandler;
 @property (nonatomic,strong)NSMutableArray *AppFirstLaunchedHandler;
 
-
 @end
-
-
 
 static NSString *const AppLaunchedEventName      = @"AppLaunched";
 static NSString *const AppResignActiveEventName  = @"AppResignActive";
@@ -34,7 +31,6 @@ static NSString *const AppBecameActiveEventName  = @"AppBecameActive";
 static NSString *const AppToForegroundEventName  = @"AppEnterForeground";
 static NSString *const AppToBackgroundEventName  = @"AppEnterBackground";
 static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
-
 
 @implementation LifeCycleAnnnotation
 - (instancetype)init
@@ -47,8 +43,6 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
         self.AppToForegroundHandler  = [NSMutableArray array];
         self.AppToBackgroundHandler  = [NSMutableArray array];
         self.AppFirstLaunchedHandler = [NSMutableArray array];
-        
-        
 
         [[NSNotificationCenter defaultCenter]addObserver:self
                                                 selector:@selector(onLifeCycleCallBack:)
@@ -149,8 +143,6 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
             dispatcher = self.AppToBackgroundHandler;
         }
         
-        
-        
         for (NSDictionary *map in dispatcher) {
             NSString *clsName = [[map allKeys]firstObject];
             if (clsName && [map akSafeObjectForKey:clsName]) {
@@ -162,9 +154,7 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
                     ((void (*)(id, SEL,NSNotification *))[cls methodForSelector:sel])(cls, sel,note);
                 }
             }
-            
         }
-        
     }
 }
 
