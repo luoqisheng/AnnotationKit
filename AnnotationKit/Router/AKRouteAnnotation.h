@@ -10,13 +10,13 @@
 #import "AKEngine.h"
 
 #ifndef RequestMapping
-#define RequestMapping(name,url) \
-class AKEngine; char *const NameGen(name,_url) AnnotationDATA(route) = "{\""#name"\":"#url"}";
+#define RequestMapping(cls,url) \
+class AKEngine; char *const NameGen(cls) AnnotationDATA(route) = "{\""#cls"\":"#url"}";
 #endif
 
 #ifndef AKNPC
 #define AKNPC(cls,sel,url) \
-class AKEngine; char *const NameGen(cls,sel,_url) AnnotationDATA(npc) = "{\"cls_name\":\""#cls"\",\"sel_name\":\""#sel"\",\"url\":"#url"}";
+class AKEngine; char *const NameGen(cls) AnnotationDATA(npc) = "{\"cls_name\":\""#cls"\",\"sel_name\":\""#sel"\",\"url\":"#url"}";
 #endif
 
 @interface AKRouteAnnotation : PHAnnotationHandler

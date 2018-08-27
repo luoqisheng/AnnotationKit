@@ -20,5 +20,5 @@
 #define AppFirstLaunched            
 
 #define When(event,cls,selector) \
-class AKEngine; char *const NameGen(event,cls,selector) AnnotationDATA(eventkit) = "{\"cls\":\""#cls"\",\"sel\":\""#selector"\",\"event\":\""#event"\"}";
+class AKEngine; char *const NameGen(cls) AnnotationDATA(eventkit) = "{\"cls\":\""#cls"\",\"sel\":\""#selector"\",\"event\":\""#event"\"}";
 #endif

@@ -15,7 +15,7 @@
 
 #define AnnotationSectName "annotation"
 #define DefineAnnotation(handler,section) \
-class AKEngine; char * const NameGen(handler,annotation) AnnotationDATA(annotation) = "{\""#handler"\":\""#section"\"}";
+class AKEngine; char *const NameGen(handler) AnnotationDATA(annotation) = "{\""#handler"\":\""#section"\"}";
 #endif
 
 @interface AKEngine : NSObject
