@@ -56,12 +56,9 @@ NSArray<NSString *>* annotation_read_content(const char *sectionName,const mach_
     return configs;
 }
 
-
 static void prepare_annotation(const struct mach_header *header,
                             intptr_t slide)
 {
- 
-    
     for (NSDictionary *map in _annotations) {
         if ([map isKindOfClass:[NSDictionary class]] && [map allKeys].count) {
             NSString *sectionName = [[map allKeys] firstObject];
@@ -115,17 +112,14 @@ static void prepare_annotation(const struct mach_header *header,
             NSError *error = nil;
             id json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
             if (!error) {
-                
                 if ([json isKindOfClass:[NSDictionary class]] && [json allKeys].count) {
                     NSString *handler = [[json allKeys] firstObject];
                     NSString *sectionName = [json akSafeObjectForKey:handler];
-                    
                     
                     if (handler && sectionName) {
                         [_annotations addObject:@{sectionName:handler}];
                     }
                 }
-                
             }
         }
 

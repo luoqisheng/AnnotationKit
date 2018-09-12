@@ -145,11 +145,11 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
         
         for (NSDictionary *map in dispatcher) {
             NSString *clsName = [[map allKeys]firstObject];
-            if (clsName && [map akSafeObjectForKey:clsName]) {
+            NSString *selName = [self extractSelectorNameFrom:[map akSafeObjectForKey:clsName]];
+            
+            if (clsName && selName) {
                 Class cls = NSClassFromString(clsName);
-                NSString *selName = [NSString stringWithFormat:@"%@:",[map akSafeObjectForKey:clsName]];
                 SEL sel   = NSSelectorFromString(selName);
-                
                 if ([cls respondsToSelector:sel]) {
                     ((void (*)(id, SEL,NSNotification *))[cls methodForSelector:sel])(cls, sel,note);
                 }
@@ -158,4 +158,14 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
     }
 }
 
+// str likes `@selector(func:arg:)`
+// return `func:arg:`
+- (NSString *)extractSelectorNameFrom:(NSString *)str {
+    if (!str) {
+        return nil;
+    }
+    NSString *selName = [str stringByReplacingOccurrencesOfString:@"@selector(" withString:@""];
+    selName = [selName stringByReplacingOccurrencesOfString:@")" withString:@""];
+    return selName;
+}
 @end

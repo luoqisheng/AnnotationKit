@@ -17,7 +17,7 @@
 @end
 @implementation ViewController (test)
 
-@When(AppLaunched,ViewController,doLaunchedCategory)
+@When(AppLaunched,ViewController, @selector(doLaunchedCategory:))
 + (void)doLaunchedCategory:(NSNotification *)note
 {
     NSLog(@"%@",note);
@@ -32,31 +32,31 @@
 @RequestMapping(ViewController, "demo://demo/index/")
 @implementation ViewController
 
-@When(AppLaunched,ViewController,doLaunched)
+@When(AppLaunched,ViewController,@selector(doLaunched:))
 + (void)doLaunched:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppEnterForeground,ViewController,doEnterForeground)
+@When(AppEnterForeground,ViewController,@selector(doEnterForeground:))
 + (void)doEnterForeground:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppEnterBackground,ViewController,doEnterBackground)
+@When(AppEnterBackground,ViewController,@selector(doEnterBackground:))
 + (void)doEnterBackground:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppResignActive,ViewController,doResignActive)
+@When(AppResignActive,ViewController,@selector(doResignActive:))
 + (void)doResignActive:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppBecameActive,ViewController,doBecameActive)
+@When(AppBecameActive,ViewController,@selector(doBecameActive:))
 + (void)doBecameActive:(NSNotification *)note
 {
     NSLog(@"%@",note);

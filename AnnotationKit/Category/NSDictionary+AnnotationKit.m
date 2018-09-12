@@ -9,7 +9,7 @@
 #import "NSDictionary+AnnotationKit.h"
 
 @implementation NSDictionary (AnnotaionKit)
-- (id)akSafeObjectForKey:(NSString *)key{
+- (id)akSafeObjectForKey:(NSString *)key {
     id value = [self objectForKey:key];
     if([value isKindOfClass:[NSNull class]]){
         value = nil;

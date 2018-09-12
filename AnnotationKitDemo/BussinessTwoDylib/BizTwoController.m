@@ -13,11 +13,11 @@
 #import <AnnotationKit/AKRouteAnnotation.h>
 
 @interface BizTwoController (test)
-
 @end
+
 @implementation BizTwoController (test)
 
-@When(AppLaunched,BizTwoController,doLaunchedCategory)
+@When(AppLaunched,BizTwoController,@selector(doLaunchedCategory:))
 + (void)doLaunchedCategory:(NSNotification *)note
 {
     NSLog(@"%@",note);
@@ -32,37 +32,35 @@
 @RequestMapping(BizTwoController, "demo://demo/biz2/")
 @implementation BizTwoController
 
-@When(AppLaunched,BizTwoController,doLaunched)
+@When(AppLaunched,BizTwoController,@selector(doLaunched:))
 + (void)doLaunched:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppEnterForeground,BizTwoController,doEnterForeground)
+@When(AppEnterForeground,BizTwoController,@selector(doEnterForeground:))
 + (void)doEnterForeground:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppEnterBackground,BizTwoController,doEnterBackground)
+@When(AppEnterBackground,BizTwoController,@selector(doEnterBackground:))
 + (void)doEnterBackground:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppResignActive,BizTwoController,doResignActive)
+@When(AppResignActive,BizTwoController,@selector(doResignActive:))
 + (void)doResignActive:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
 
-@When(AppBecameActive,BizTwoController,doBecameActive)
+@When(AppBecameActive,BizTwoController,@selector(doBecameActive:))
 + (void)doBecameActive:(NSNotification *)note
 {
     NSLog(@"%@",note);
 }
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -105,6 +103,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - getter 
 - (UIButton *)jumpProfile
 {

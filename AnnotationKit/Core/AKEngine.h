@@ -19,12 +19,9 @@ class AKEngine; char *const NameGen(handler) AnnotationDATA(annotation) = "{\""#
 #endif
 
 @interface AKEngine : NSObject
-
 @property(nonatomic,copy)NSDictionary    *launchOptions;
 @property(nonatomic,strong)UIApplication *application;
 
 + (AKEngine *)sharedAKEngine;
-
 - (void)setUp;
-
 @end

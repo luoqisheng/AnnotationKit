@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BizTwoController : UIViewController
-
-
 @end
 

@@ -7,7 +7,7 @@ target 'AnnotationKitDemo' do
 	platform:ios, '8.0'
     use_frameworks!
     
-    pod  'AnnotationKit',     '1.0.2'
+    pod  'AnnotationKit',     :path=> '../AnnotationKit.podspec'
     
     pod  'BussinessOneDylib',       :path=> './BussinessOneDylib'
     pod  'BussinessTwoDylib',       :path=> './BussinessTwoDylib'
