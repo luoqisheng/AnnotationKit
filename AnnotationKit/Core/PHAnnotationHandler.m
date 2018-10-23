@@ -34,6 +34,7 @@ static NSMutableDictionary * _sharedInstances = nil;
     
     return instance;
 }
+
 - (void)handleAnnotationConfig:(NSArray<NSString *>*)configs
 {
     @throw [NSException exceptionWithName:@"PHAnnotation Exception" reason:[NSString stringWithFormat:@"you have should override @selector(handleAnnotationConfig:) in %@",[self class]] userInfo:nil];

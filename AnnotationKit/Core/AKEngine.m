@@ -32,7 +32,7 @@ typedef struct section_64     section_t;
 #endif
 
 static NSMutableArray<NSDictionary *> *_annotations = nil;
-NSArray<NSString *>* annotation_read_content(const char *sectionName,const mach_header_t *header){
+NSArray<NSString *>* annotation_read_content(const char *sectionName,const mach_header_t *header) {
     
     NSMutableArray *configs = [NSMutableArray array];
     const mach_header_t *mhp = header;
@@ -56,8 +56,7 @@ NSArray<NSString *>* annotation_read_content(const char *sectionName,const mach_
     return configs;
 }
 
-static void prepare_annotation(const struct mach_header *header,
-                            intptr_t slide)
+static void prepare_annotation(const struct mach_header *header, intptr_t slide)
 {
     for (NSDictionary *map in _annotations) {
         if ([map isKindOfClass:[NSDictionary class]] && [map allKeys].count) {
@@ -80,7 +79,6 @@ static void prepare_annotation(const struct mach_header *header,
         }
     }
 }
-
 
 @implementation AKEngine
 

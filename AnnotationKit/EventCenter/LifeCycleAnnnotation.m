@@ -80,7 +80,6 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
         NSError *error = nil;
         id json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
         if (!error) {
-            
             if ([json isKindOfClass:[NSDictionary class]]) {
                 NSString *clsName = [json akSafeObjectForKey:@"cls"];
                 NSString *sel     = [json akSafeObjectForKey:@"sel"];
@@ -109,10 +108,7 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
                 if ([event isEqualToString:AppFirstLaunchedEventName]) {
                     [self.AppFirstLaunchedHandler addObject:@{clsName:sel}];
                 }
-                
-                
             }
-            
         }
     }
 }
@@ -121,7 +117,6 @@ static NSString *const AppFirstLaunchedEventName = @"AppFirstLaunched";
 - (void)onLifeCycleCallBack:(NSNotification *)note
 {
     @synchronized (self) {
-        
         NSMutableArray *dispatcher = nil;
         if ([note.name isEqualToString:UIApplicationDidFinishLaunchingNotification]) {
             dispatcher = self.AppLaunchedHandler;

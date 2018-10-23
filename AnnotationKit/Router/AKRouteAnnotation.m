@@ -30,7 +30,6 @@
         NSError *error = nil;
         id json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
         if (!error) {
-            
             if ([json isKindOfClass:[NSDictionary class]] && [json allKeys].count == 1) {
                 NSString *clsName = [[json allKeys] firstObject];
                 NSString *url = [json akSafeObjectForKey:clsName];
@@ -39,7 +38,6 @@
                     [self.configs addObject:@{url:clsName}];
                 }
             }
-            
         }
     }
 }
