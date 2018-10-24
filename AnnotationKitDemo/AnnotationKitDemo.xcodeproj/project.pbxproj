@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B05EBF021800CB800ADD2C9 /* ViewController+Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B05EBEE21800CB800ADD2C9 /* ViewController+Counter.m */; };
 		B098B1DA447AC728B690F82D /* Pods_AnnotationKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0138AD7D99EF53C9073A144 /* Pods_AnnotationKitDemo.framework */; };
 		F8CB9E931E8CD0CE00431C16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB9E921E8CD0CE00431C16 /* main.m */; };
 		F8CB9E961E8CD0CE00431C16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CB9E951E8CD0CE00431C16 /* AppDelegate.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B05EBEE21800CB800ADD2C9 /* ViewController+Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+Counter.m"; sourceTree = "<group>"; };
+		2B05EBEF21800CB800ADD2C9 /* ViewController+Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Counter.h"; sourceTree = "<group>"; };
 		2E9C89D8FCC017BA82ED3885 /* Pods-AnnotationKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationKitDemo/Pods-AnnotationKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A0138AD7D99EF53C9073A144 /* Pods_AnnotationKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnnotationKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAECAFBC6F58FE01A32A007A /* Pods-AnnotationKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnotationKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnotationKitDemo/Pods-AnnotationKitDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 			children = (
 				F8CB9EA81E8CD3EC00431C16 /* ProfileController.h */,
 				F8CB9EA91E8CD3EC00431C16 /* ProfileController.m */,
+				2B05EBEF21800CB800ADD2C9 /* ViewController+Counter.h */,
+				2B05EBEE21800CB800ADD2C9 /* ViewController+Counter.m */,
 				F8CB9E941E8CD0CE00431C16 /* AppDelegate.h */,
 				F8CB9E951E8CD0CE00431C16 /* AppDelegate.m */,
 				F8CB9E971E8CD0CE00431C16 /* ViewController.h */,
@@ -305,6 +310,7 @@
 			files = (
 				F8CB9E991E8CD0CE00431C16 /* ViewController.m in Sources */,
 				F8CB9E961E8CD0CE00431C16 /* AppDelegate.m in Sources */,
+				2B05EBF021800CB800ADD2C9 /* ViewController+Counter.m in Sources */,
 				F8CB9E931E8CD0CE00431C16 /* main.m in Sources */,
 				F8CB9EAA1E8CD3EC00431C16 /* ProfileController.m in Sources */,
 			);
