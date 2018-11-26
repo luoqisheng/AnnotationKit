@@ -1,9 +1,9 @@
 # AnnotationKit
-The annotation implement by Objective-C
+The annotation implementation using Objective-C
 
 #### 0x00 Abstract
 
-AnnotationKit provide a meta-programming approach,like the annotation in Java. 
+an annotation is a form of syntactic metadata that can be added to Objective-C source code, like the java annotation.
 
 #### 0x01 What can it do?
 
@@ -47,7 +47,7 @@ AnnotationKit provide a meta-programming approach,like the annotation in Java.
 
 ```objective-c
 //ViewController.m
-@RequestMapping(ViewController, "prophet://demo/index/")
+@RequestMapping(ViewController, "demo://demo/index/")
 @implementation ViewController
 @end
 
